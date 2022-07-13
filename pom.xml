@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>mss walmart release</name>
-	      <url>http://65.2.57.67:8081/repository/walmart-release/</url>
+	      <url>http://15.207.254.185:8081/repository/walmart-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>mss wlmart snapshot</name>
-	      <url>http://65.2.57.67:8081/repository/walmart-snapshot/</url>
+	      <url>http://15.207.254.185:8081/repository/walmart-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
