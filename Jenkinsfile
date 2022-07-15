@@ -20,7 +20,7 @@ sh "${mavenhome}/bin/mvn clean package"
 
 
 
-stage('uploadingintonexus'){
+/*stage('uploadingintonexus'){
 sh "${mavenhome}/bin/mvn clean deploy"
 }
 
@@ -30,7 +30,7 @@ sshagent(['e1ea57f8-5795-48c4-972a-51fb8e6d8044']) {
  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.110.193.243:/opt/apache-tomcat-9.0.64/webapps"   
 }
 }
-
+*/
 
 
 }
