@@ -47,7 +47,7 @@ finally{
 slacknotifications(currentBuild.result)
 }//finally closing
 
-}// Node Closing
+}// 
 
 def slacknotifications(String buildStatus = 'STARTED') {
  
