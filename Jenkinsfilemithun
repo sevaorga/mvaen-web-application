@@ -35,7 +35,7 @@ stage('DeployAppIntoTomcatServer'){
 sshagent(['85c7b4b3-39bf-4d52-be98-32f11ec4310a']) {
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@15.206.173.240:/opt/apache-tomcat-9.0.64/webapps/"
 }//stage closing
-}//ssh agent closing
+}//ssh agent closingg
 
 */
 }
