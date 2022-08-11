@@ -1,0 +1,51 @@
+pipeline
+{
+
+agent any
+
+tools{
+maven "maven3.8.6"
+
+}   
+    stages{
+        
+        
+    stage('checkoutcode'){
+    
+    
+    steps{
+        
+      git branch: 'development', credentialsId: 'a2182af5-d61b-4391-9d95-47e9ba857583', url: 'https://github.com/sevaorga/mvaen-web-application.git'  
+        
+    }//steps closing
+    }//stage closing
+    
+   
+   stage('unit&build'){
+   steps{
+   parallel(
+   unit: {
+       sh "mvn clean test"
+   },
+   
+   
+   build: {
+   
+   sh "mvn clean package"
+   }
+  )
+   }
+   }
+  
+}//stagesclosing   
+}//pipelineclosing
+  
+    
+    
+    
+    
+
+
+
+
+
