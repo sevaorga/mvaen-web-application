@@ -1,0 +1,44 @@
+
+
+@Library(['msssharedlibs', 'mssbuildlibs'])_
+pipeline {
+    agent any
+    
+    
+    tools{
+        
+    maven "maven3.8.6"    
+        
+    }
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                
+                
+                stages('Build')
+            }
+        }
+    }
+    
+    
+    post{
+        
+        success{
+            
+           sendSlackNotifications('success') 
+            
+            
+        }
+        
+        
+        failure{
+            
+            sendSlackNotifications('failure')
+            
+            
+        }
+    }
+    
+}
