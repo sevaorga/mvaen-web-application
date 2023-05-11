@@ -60,26 +60,7 @@ pipeline{
       
       
       
-      post {
-  
-  aborted {
-  
-  
-   notifyBuild("currentBuild.result")
-  
-  }
-  success {
-  
-  notifyBuild("currentBuild.result")
-   
-  }
-  unsuccessful {
-  notifyBuild("currentBuild.result")
-  
-    
-}
 
-      }
 }//pipeline closing
 
 def notifyBuild(String buildStatus = 'STARTED') {
