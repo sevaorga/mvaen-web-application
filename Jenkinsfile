@@ -14,7 +14,7 @@ pipeline{
       stages{        
     stage('checkoutcode'){
           steps{     
-         notifyBuild('STARTED')
+         
     git branch: 'new', url: 'https://github.com/sevaorga/mvaen-web-application.git'    
         
     }
@@ -53,7 +53,7 @@ pipeline{
     }
      
     
-    
+      }
       
     
     
