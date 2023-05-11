@@ -45,7 +45,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
         
         
     }
-    
+      }//try block closing
     catch (e) {
     // If there was an exception thrown, the build failed
     currentBuild.result = "FAILED"
@@ -57,7 +57,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
   }   
     
     
-      }//try block closing
+      
     
     
       
