@@ -2,7 +2,7 @@ pipeline{
       agent any
       tools{
       
-      maven maven3.9.1
+      maven "maven3.9.1"
       }
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
     
