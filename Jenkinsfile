@@ -8,6 +8,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
     echo "the build number was ${env.BUILD_NUMBER}"
       
       try{  
+          notifyBuild(currentBuild.result)  
     stage('checkoutcode'){
         
     git branch: 'new', url: 'https://github.com/sevaorga/mvaen-web-application.git'    
