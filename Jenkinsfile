@@ -20,7 +20,7 @@ pipeline{
     
     stage('build'){
 
-    sh "${mavenhome}/bin/mvn clean package"
+    sh "mvn clean package"
         
         
         
@@ -30,13 +30,13 @@ pipeline{
     stage('soanrscan'){
         
         
-        sh "${mavenhome}/bin/mvn sonar:sonar"    
+        sh "mvn sonar:sonar"    
         
     }
     
     stage('deploy'){
         
-        sh "${mavenhome}/bin/mvn deploy"
+        sh "mvn deploy"
     }
     
     
