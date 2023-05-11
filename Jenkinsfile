@@ -83,6 +83,7 @@ pipeline{
 }//pipeline closing
 
 
+
 def notifyBuild(String buildStatus = 'STARTED') {
   // build status of null means successful
   buildStatus =  buildStatus ?: 'SUCCESSFUL'
@@ -105,4 +106,7 @@ def notifyBuild(String buildStatus = 'STARTED') {
     colorCode = '#FF0000'
   }
 
+  // Send notifications
+  slackSend (color: colorCode, message: summary)
 }
+
