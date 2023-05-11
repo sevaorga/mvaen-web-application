@@ -4,11 +4,11 @@ node{
      
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
     
-    sh "echo the branch name was ${env.BRANCH_NAME}"
+    
     echo "the build number was ${env.BUILD_NUMBER}"
     stage('checkoutcode'){
         
-    git branch: 'development', url: 'https://github.com/sevaorga/mvaen-web-application.git'    
+    git branch: 'new', url: 'https://github.com/sevaorga/mvaen-web-application.git'    
         
     }
     
