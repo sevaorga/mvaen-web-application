@@ -6,6 +6,8 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
     
     
     echo "the build number was ${env.BUILD_NUMBER}"
+      
+      try{  
     stage('checkoutcode'){
         
     git branch: 'new', url: 'https://github.com/sevaorga/mvaen-web-application.git'    
@@ -47,7 +49,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
     
     
     
-    
+      }
     
     
       
