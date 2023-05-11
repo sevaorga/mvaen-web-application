@@ -46,10 +46,18 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
         
     }
     
+    catch (e) {
+    // If there was an exception thrown, the build failed
+    currentBuild.result = "FAILED"
+    throw e
+    }
+     finally {
+    // Success or failure, always send notifications
+    notifyBuild(currentBuild.result)
+  }   
     
     
-    
-      }
+      }//try block closing
     
     
       
@@ -57,7 +65,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
       
       
 
-}
+}//pipeline closing
 
 
 
