@@ -53,14 +53,14 @@ pipeline{
     }
      
     
-      }
+      
       
     
     
       
       
       
-   /*   post {
+      post {
   
   aborted {
   
@@ -77,7 +77,7 @@ pipeline{
   notifyBuild("currentBuild.result")
   
     
-}*/
+}
 
 
 }//pipeline closing
@@ -85,8 +85,7 @@ pipeline{
 
 
 
-
-/*def notifyBuild(String buildStatus = 'STARTED') {
+def notifyBuild(String buildStatus = 'STARTED') {
   // build status of null means successful
   buildStatus =  buildStatus ?: 'SUCCESSFUL'
 
@@ -110,8 +109,6 @@ pipeline{
 
   // Send notifications
   slackSend (color: colorCode, message: summary)
-}*/
+}
 
-
-      
 
